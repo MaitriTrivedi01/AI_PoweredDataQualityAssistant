@@ -1,0 +1,8 @@
+FRONTEND: 
+cd frontend && npm start
+if this does'nt work : npm run dev
+
+BACKEND:
+cd backend && source venv/bin/activate && uvicorn app.main:app --reload --log-level debug
+
+uvicorn app.main:app --reload --log-level debug

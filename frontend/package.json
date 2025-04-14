@@ -1,0 +1,40 @@
+{
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/form-control": "^2.2.0",
+    "@chakra-ui/icons": "^2.1.1",
+    "@chakra-ui/next-js": "^2.2.0",
+    "@chakra-ui/react": "^2.8.2",
+    "@chakra-ui/stat": "^2.1.1",
+    "@chakra-ui/theme": "^3.4.6",
+    "@chakra-ui/theme-utils": "^2.0.21",
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "date-fns": "^4.1.0",
+    "framer-motion": "^10.18.0",
+    "next": "14.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^5.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.16",
+    "@types/react": "^18.2.52",
+    "@types/react-dom": "^18.2.18",
+    "autoprefixer": "^10.4.21",
+    "eslint": "^8.56.0",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.1",
+    "typescript": "^5.3.3"
+  }
+}

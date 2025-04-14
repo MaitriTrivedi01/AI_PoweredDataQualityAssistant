@@ -1,0 +1,79 @@
+config_version: 3.0
+data_docs_sites:
+  local_site:
+    class_name: SiteBuilder
+    show_how_to_buttons: true
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: uncommitted/data_docs/local_site/
+    site_index_builder:
+      class_name: DefaultSiteIndexBuilder
+datasources:
+  my_datasource:
+    class_name: Datasource
+    execution_engine:
+      class_name: SqlAlchemyExecutionEngine
+      credentials:
+        host: aws-0-ap-south-1.pooler.supabase.com
+        port: 6543
+        username: postgres.tppovcrbrnfghxmslfcs
+        password: Maitri142001
+        database: postgres
+        drivername: postgresql+psycopg2
+        query:
+          sslmode: require
+    data_connectors:
+      default_inferred_data_connector_name:
+        class_name: InferredAssetSqlDataConnector
+        include_schema_name: true
+      default_configured_data_connector_name:
+        class_name: ConfiguredAssetSqlDataConnector
+        assets:
+          students:
+            class_name: Asset
+            schema_name: public
+            table_name: students
+evaluation_parameter_store_name: evaluation_parameter_store
+expectations_store_name: expectations_store
+validations_store_name: validations_store
+stores:
+  evaluation_parameter_store:
+    class_name: EvaluationParameterStore
+    store_backend:
+      class_name: InMemoryStoreBackend
+  expectations_store:
+    class_name: ExpectationsStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: expectations/
+  validations_store:
+    class_name: ValidationsStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: validations/
+  checkpoint_store:
+    class_name: CheckpointStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: checkpoints/
+  profiler_store:
+    class_name: ProfilerStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: profilers/
+  datasource_store:
+    class_name: DatasourceStore
+    store_backend:
+      class_name: TupleFilesystemStoreBackend
+      base_directory: datasources/
+    serializer:
+      class_name: JsonSerializer
+notebooks:
+anonymous_usage_statistics:
+  data_context_id: 00000000-0000-0000-0000-000000000000
+  enabled: false
+  usage_statistics_url: https://stats.greatexpectations.io/great_expectations/v1/usage_statistics
+include_rendered_content:
+  globally: false
+  expectation_suite: false
+  expectation_validation_result: false 
