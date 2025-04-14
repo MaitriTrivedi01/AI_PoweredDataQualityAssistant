@@ -64,4 +64,4 @@ npm run dev
 
 ## Acknowledgments
 
-Created as part of a data quality management initiative to improve data governance and reliability. 
+Created as part of a data quality management initiative to improve data governance and reliability.
